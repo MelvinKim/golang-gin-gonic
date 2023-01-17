@@ -18,4 +18,20 @@
     Author      Person `json:"author" binding:"required"`
   }
   ```
+  
+### Repository layer
+  - responsible for any database related activities eg fetching data, posting data
+  
+### Service layer
+  - holds the core business logic
+  - Business logic may include actions that might require to make a database call or make an external API request
+  - we need to inject our repository into the services.
+
+### Controllers
+- static handlers for the incoming HTTP / HTTPS requests
+- delegates the data from the request to the service layer for implementation of business logic
+- returns the response for the requests
+
+### templates 
+- displays what the user will view --> the frontend
 
