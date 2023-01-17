@@ -3,7 +3,8 @@
 ### Models
 - also known as Domains / Entities
 - defined by use of a struct, similar to classes in OOP
-  ```type Person struct {
+  ```
+  type Person struct {
     FirstName string `json:"firstname" binding:"required"`
     LastName  string `json:"lastname" binding:"required"`
     Age       int8   `json:"age" binding:"gte=1,lte=130"`
@@ -15,5 +16,6 @@
     Description string `json:"description" binding:"max=20"`
     URL         string `json:"url" binding:"required,url"`
     Author      Person `json:"author" binding:"required"`
-  }```
+  }
+  ```
 
